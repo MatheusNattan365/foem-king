@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../../components/login/login.component';
-import { AppModule } from 'src/app/app.module';
+import { CoreModule } from 'src/app/core.module';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 const routes: Routes = [
     {
-        path: 'signin',
+        path: 'sign-in',
         pathMatch: 'full',
         component: LoginComponent,
     },
     {
-        path: 'signup',
+        path: 'sign-up',
         pathMatch: 'full',
         component: LoginComponent,
     },
     {
         path: '',
-        redirectTo: 'signin',
+        redirectTo: 'sign-in',
         pathMatch: 'full',
     },
 ];
 
 @NgModule({
     declarations: [LoginComponent],
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(routes), CoreModule],
 })
 export class AuthModule {}
