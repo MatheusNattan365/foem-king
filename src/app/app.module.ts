@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core.module';
-import { environment } from '../environments/environment';
+import { environment } from './environment.local';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
